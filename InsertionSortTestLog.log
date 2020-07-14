@@ -1,0 +1,320 @@
+#-------------------------------------------------------------------
+# Test Case 1: Short unsorted list : arrlist = [10,4,8,6,1]
+#-------------------------------------------------------------------
+
+Input Array : [10, 4, 8, 6, 1] >> Length : 5 
+-----------------------------------------------------
+Current Unsorted array  : [10, 4, 8, 6, 1] 
+At Index: 1 >>  unsortedValue value 4 
+Current unsortedValue array value : 4, value to the left : 10
+As 4 < 10, Move arr[j-1] value 10 to the right at index 1  
+At index 1 - New value is 10 
+ >> Comparing Left of index: 0, Value 1 with  unsortedValue: 4
+ >> (4 < 1) => False and j : 0 >> unsortedValue is at sorted postion 
+At index 0 >> Insert unsortedValue value 4 
+New array formation : [4, 10, 8, 6, 1] 
+-----------------------------------------------------
+Current Unsorted array  : [4, 10, 8, 6, 1] 
+At Index: 2 >>  unsortedValue value 8                                    
+Current unsortedValue array value : 8, value to the left : 10
+As 8 < 10, Move arr[j-1] value 10 to the right at index 2  
+At index 2 - New value is 10 
+ >> Comparing Left of index: 1, Value 4 with  unsortedValue: 8
+ >> (8 < 4) => False and j : 1 >> unsortedValue is at sorted postion 
+At index 1 >> Insert unsortedValue value 8 
+New array formation : [4, 8, 10, 6, 1] 
+-----------------------------------------------------
+Current Unsorted array  : [4, 8, 10, 6, 1] 
+At Index: 3 >>  unsortedValue value 6 
+Current unsortedValue array value : 6, value to the left : 10
+As 6 < 10, Move arr[j-1] value 10 to the right at index 3  
+At index 3 - New value is 10 
+ >> Comparing Left of index: 2, Value 8 with  unsortedValue: 6
+ >> (6 < 8) => True >> Continue Checking left index values
+At index 2 >> Insert unsortedValue value 6 
+As 6 < 8, Move arr[j-1] value 8 to the right at index 2  
+At index 2 - New value is 8 
+ >> Comparing Left of index: 1, Value 4 with  unsortedValue: 6
+ >> (6 < 4) => False and j : 1 >> unsortedValue is at sorted postion 
+At index 1 >> Insert unsortedValue value 6 
+New array formation : [4, 6, 8, 10, 1] 
+-----------------------------------------------------
+Current Unsorted array  : [4, 6, 8, 10, 1] 
+At Index: 4 >>  unsortedValue value 1 
+Current unsortedValue array value : 1, value to the left : 10
+As 1 < 10, Move arr[j-1] value 10 to the right at index 4  
+At index 4 - New value is 10 
+ >> Comparing Left of index: 3, Value 8 with  unsortedValue: 1
+ >> (1 < 8) => True >> Continue Checking left index values
+At index 3 >> Insert unsortedValue value 1 
+As 1 < 8, Move arr[j-1] value 8 to the right at index 3  
+At index 3 - New value is 8 
+ >> Comparing Left of index: 2, Value 6 with  unsortedValue: 1
+ >> (1 < 6) => True >> Continue Checking left index values
+At index 2 >> Insert unsortedValue value 1 
+As 1 < 6, Move arr[j-1] value 6 to the right at index 2  
+At index 2 - New value is 6 
+ >> Comparing Left of index: 1, Value 4 with  unsortedValue: 1
+ >> (1 < 4) => True >> Continue Checking left index values
+At index 1 >> Insert unsortedValue value 1 
+As 1 < 4, Move arr[j-1] value 4 to the right at index 1  
+At index 1 - New value is 4 
+ >> Comparing Left of index: 0, Value 10 with  unsortedValue: 1
+ >> (1 < 10) => False and j : 0 >> unsortedValue is at sorted postion 
+At index 0 >> Insert unsortedValue value 1 
+New array formation : [1, 4, 6, 8, 10] 
+[1, 4, 6, 8, 10]
+
+#------------------------------------------------------------------------------------------------
+# Test Case 2: Long unsorted list : arrlist = [3, 56, 2, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45]
+#------------------------------------------------------------------------------------------------
+
+Input Array : [3, 56, 2, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45] >> Length : 13 
+-----------------------------------------------------
+Current Unsorted array  : [3, 56, 2, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45] 
+At Index: 1 >>  unsortedValue value 56 
+Current unsortedValue array value : 56, value to the left : 3
+New array formation : [3, 56, 2, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45] 
+-----------------------------------------------------
+Current Unsorted array  : [3, 56, 2, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45] 
+At Index: 2 >>  unsortedValue value 2 
+Current unsortedValue array value : 2, value to the left : 56
+As 2 < 56, Move arr[j-1] value 56 to the right at index 2                
+At index 2 - New value is 56 
+ >> Comparing Left of index: 1, Value 3 with  unsortedValue: 2
+ >> (2 < 3) => True >> Continue Checking left index values
+At index 1 >> Insert unsortedValue value 2 
+As 2 < 3, Move arr[j-1] value 3 to the right at index 1  
+At index 1 - New value is 3 
+ >> Comparing Left of index: 0, Value 45 with  unsortedValue: 2
+ >> (2 < 45) => False and j : 0 >> unsortedValue is at sorted postion 
+At index 0 >> Insert unsortedValue value 2 
+New array formation : [2, 3, 56, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45] 
+-----------------------------------------------------
+Current Unsorted array  : [2, 3, 56, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45] 
+At Index: 3 >>  unsortedValue value 58 
+Current unsortedValue array value : 58, value to the left : 56
+New array formation : [2, 3, 56, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45] 
+-----------------------------------------------------
+Current Unsorted array  : [2, 3, 56, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45] 
+At Index: 4 >>  unsortedValue value 79 
+Current unsortedValue array value : 79, value to the left : 58
+New array formation : [2, 3, 56, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45] 
+-----------------------------------------------------
+Current Unsorted array  : [2, 3, 56, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45] 
+At Index: 5 >>  unsortedValue value 59 
+Current unsortedValue array value : 59, value to the left : 79
+As 59 < 79, Move arr[j-1] value 79 to the right at index 5  
+At index 5 - New value is 79 
+ >> Comparing Left of index: 4, Value 58 with  unsortedValue: 59
+ >> (59 < 58) => False and j : 4 >> unsortedValue is at sorted postion 
+At index 4 >> Insert unsortedValue value 59 
+New array formation : [2, 3, 56, 58, 59, 79, 34, 23, 4, 78, 8, 123, 45] 
+-----------------------------------------------------
+Current Unsorted array  : [2, 3, 56, 58, 59, 79, 34, 23, 4, 78, 8, 123, 45] 
+At Index: 6 >>  unsortedValue value 34 
+Current unsortedValue array value : 34, value to the left : 79
+As 34 < 79, Move arr[j-1] value 79 to the right at index 6  
+At index 6 - New value is 79 
+ >> Comparing Left of index: 5, Value 59 with  unsortedValue: 34
+ >> (34 < 59) => True >> Continue Checking left index values
+At index 5 >> Insert unsortedValue value 34 
+As 34 < 59, Move arr[j-1] value 59 to the right at index 5  
+At index 5 - New value is 59 
+ >> Comparing Left of index: 4, Value 58 with  unsortedValue: 34
+ >> (34 < 58) => True >> Continue Checking left index values
+At index 4 >> Insert unsortedValue value 34 
+As 34 < 58, Move arr[j-1] value 58 to the right at index 4  
+At index 4 - New value is 58 
+ >> Comparing Left of index: 3, Value 56 with  unsortedValue: 34
+ >> (34 < 56) => True >> Continue Checking left index values
+At index 3 >> Insert unsortedValue value 34 
+As 34 < 56, Move arr[j-1] value 56 to the right at index 3  
+At index 3 - New value is 56 
+ >> Comparing Left of index: 2, Value 3 with  unsortedValue: 34
+ >> (34 < 3) => False and j : 2 >> unsortedValue is at sorted postion 
+At index 2 >> Insert unsortedValue value 34 
+New array formation : [2, 3, 34, 56, 58, 59, 79, 23, 4, 78, 8, 123, 45] 
+-----------------------------------------------------
+Current Unsorted array  : [2, 3, 34, 56, 58, 59, 79, 23, 4, 78, 8, 123, 45] 
+At Index: 7 >>  unsortedValue value 23 
+Current unsortedValue array value : 23, value to the left : 79
+As 23 < 79, Move arr[j-1] value 79 to the right at index 7  
+At index 7 - New value is 79 
+ >> Comparing Left of index: 6, Value 59 with  unsortedValue: 23
+ >> (23 < 59) => True >> Continue Checking left index values
+At index 6 >> Insert unsortedValue value 23 
+As 23 < 59, Move arr[j-1] value 59 to the right at index 6  
+At index 6 - New value is 59 
+ >> Comparing Left of index: 5, Value 58 with  unsortedValue: 23
+ >> (23 < 58) => True >> Continue Checking left index values
+At index 5 >> Insert unsortedValue value 23 
+As 23 < 58, Move arr[j-1] value 58 to the right at index 5  
+At index 5 - New value is 58 
+ >> Comparing Left of index: 4, Value 56 with  unsortedValue: 23
+ >> (23 < 56) => True >> Continue Checking left index values
+At index 4 >> Insert unsortedValue value 23 
+As 23 < 56, Move arr[j-1] value 56 to the right at index 4  
+At index 4 - New value is 56 
+ >> Comparing Left of index: 3, Value 34 with  unsortedValue: 23
+ >> (23 < 34) => True >> Continue Checking left index values
+At index 3 >> Insert unsortedValue value 23 
+As 23 < 34, Move arr[j-1] value 34 to the right at index 3  
+At index 3 - New value is 34 
+ >> Comparing Left of index: 2, Value 3 with  unsortedValue: 23
+ >> (23 < 3) => False and j : 2 >> unsortedValue is at sorted postion 
+At index 2 >> Insert unsortedValue value 23 
+New array formation : [2, 3, 23, 34, 56, 58, 59, 79, 4, 78, 8, 123, 45] 
+-----------------------------------------------------
+Current Unsorted array  : [2, 3, 23, 34, 56, 58, 59, 79, 4, 78, 8, 123, 45] 
+At Index: 8 >>  unsortedValue value 4 
+Current unsortedValue array value : 4, value to the left : 79
+As 4 < 79, Move arr[j-1] value 79 to the right at index 8  
+At index 8 - New value is 79 
+ >> Comparing Left of index: 7, Value 59 with  unsortedValue: 4
+ >> (4 < 59) => True >> Continue Checking left index values
+At index 7 >> Insert unsortedValue value 4 
+As 4 < 59, Move arr[j-1] value 59 to the right at index 7  
+At index 7 - New value is 59 
+ >> Comparing Left of index: 6, Value 58 with  unsortedValue: 4
+ >> (4 < 58) => True >> Continue Checking left index values
+At index 6 >> Insert unsortedValue value 4 
+As 4 < 58, Move arr[j-1] value 58 to the right at index 6  
+At index 6 - New value is 58 
+ >> Comparing Left of index: 5, Value 56 with  unsortedValue: 4
+ >> (4 < 56) => True >> Continue Checking left index values
+At index 5 >> Insert unsortedValue value 4 
+As 4 < 56, Move arr[j-1] value 56 to the right at index 5  
+At index 5 - New value is 56 
+ >> Comparing Left of index: 4, Value 34 with  unsortedValue: 4
+ >> (4 < 34) => True >> Continue Checking left index values
+At index 4 >> Insert unsortedValue value 4 
+As 4 < 34, Move arr[j-1] value 34 to the right at index 4  
+At index 4 - New value is 34 
+ >> Comparing Left of index: 3, Value 23 with  unsortedValue: 4
+ >> (4 < 23) => True >> Continue Checking left index values
+At index 3 >> Insert unsortedValue value 4 
+As 4 < 23, Move arr[j-1] value 23 to the right at index 3  
+At index 3 - New value is 23 
+ >> Comparing Left of index: 2, Value 3 with  unsortedValue: 4
+ >> (4 < 3) => False and j : 2 >> unsortedValue is at sorted postion 
+At index 2 >> Insert unsortedValue value 4 
+New array formation : [2, 3, 4, 23, 34, 56, 58, 59, 79, 78, 8, 123, 45] 
+-----------------------------------------------------
+Current Unsorted array  : [2, 3, 4, 23, 34, 56, 58, 59, 79, 78, 8, 123, 45] 
+At Index: 9 >>  unsortedValue value 78 
+Current unsortedValue array value : 78, value to the left : 79
+As 78 < 79, Move arr[j-1] value 79 to the right at index 9  
+At index 9 - New value is 79 
+ >> Comparing Left of index: 8, Value 59 with  unsortedValue: 78
+ >> (78 < 59) => False and j : 8 >> unsortedValue is at sorted postion 
+At index 8 >> Insert unsortedValue value 78 
+New array formation : [2, 3, 4, 23, 34, 56, 58, 59, 78, 79, 8, 123, 45] 
+-----------------------------------------------------
+Current Unsorted array  : [2, 3, 4, 23, 34, 56, 58, 59, 78, 79, 8, 123, 45] 
+At Index: 10 >>  unsortedValue value 8 
+Current unsortedValue array value : 8, value to the left : 79
+As 8 < 79, Move arr[j-1] value 79 to the right at index 10  
+At index 10 - New value is 79 
+ >> Comparing Left of index: 9, Value 78 with  unsortedValue: 8
+ >> (8 < 78) => True >> Continue Checking left index values
+At index 9 >> Insert unsortedValue value 8 
+As 8 < 78, Move arr[j-1] value 78 to the right at index 9  
+At index 9 - New value is 78 
+ >> Comparing Left of index: 8, Value 59 with  unsortedValue: 8
+ >> (8 < 59) => True >> Continue Checking left index values
+At index 8 >> Insert unsortedValue value 8 
+As 8 < 59, Move arr[j-1] value 59 to the right at index 8  
+At index 8 - New value is 59 
+ >> Comparing Left of index: 7, Value 58 with  unsortedValue: 8
+ >> (8 < 58) => True >> Continue Checking left index values
+At index 7 >> Insert unsortedValue value 8 
+As 8 < 58, Move arr[j-1] value 58 to the right at index 7  
+At index 7 - New value is 58 
+ >> Comparing Left of index: 6, Value 56 with  unsortedValue: 8
+ >> (8 < 56) => True >> Continue Checking left index values
+At index 6 >> Insert unsortedValue value 8 
+As 8 < 56, Move arr[j-1] value 56 to the right at index 6  
+At index 6 - New value is 56 
+ >> Comparing Left of index: 5, Value 34 with  unsortedValue: 8
+ >> (8 < 34) => True >> Continue Checking left index values
+At index 5 >> Insert unsortedValue value 8 
+As 8 < 34, Move arr[j-1] value 34 to the right at index 5  
+At index 5 - New value is 34 
+ >> Comparing Left of index: 4, Value 23 with  unsortedValue: 8
+ >> (8 < 23) => True >> Continue Checking left index values
+At index 4 >> Insert unsortedValue value 8 
+As 8 < 23, Move arr[j-1] value 23 to the right at index 4  
+At index 4 - New value is 23 
+ >> Comparing Left of index: 3, Value 4 with  unsortedValue: 8
+ >> (8 < 4) => False and j : 3 >> unsortedValue is at sorted postion 
+At index 3 >> Insert unsortedValue value 8 
+New array formation : [2, 3, 4, 8, 23, 34, 56, 58, 59, 78, 79, 123, 45] 
+-----------------------------------------------------
+Current Unsorted array  : [2, 3, 4, 8, 23, 34, 56, 58, 59, 78, 79, 123, 45] 
+At Index: 11 >>  unsortedValue value 123 
+Current unsortedValue array value : 123, value to the left : 79
+New array formation : [2, 3, 4, 8, 23, 34, 56, 58, 59, 78, 79, 123, 45] 
+-----------------------------------------------------
+Current Unsorted array  : [2, 3, 4, 8, 23, 34, 56, 58, 59, 78, 79, 123, 45] 
+At Index: 12 >>  unsortedValue value 45 
+Current unsortedValue array value : 45, value to the left : 123
+As 45 < 123, Move arr[j-1] value 123 to the right at index 12  
+At index 12 - New value is 123 
+ >> Comparing Left of index: 11, Value 79 with  unsortedValue: 45
+ >> (45 < 79) => True >> Continue Checking left index values
+At index 11 >> Insert unsortedValue value 45 
+As 45 < 79, Move arr[j-1] value 79 to the right at index 11  
+At index 11 - New value is 79 
+ >> Comparing Left of index: 10, Value 78 with  unsortedValue: 45
+ >> (45 < 78) => True >> Continue Checking left index values
+At index 10 >> Insert unsortedValue value 45 
+As 45 < 78, Move arr[j-1] value 78 to the right at index 10  
+At index 10 - New value is 78 
+ >> Comparing Left of index: 9, Value 59 with  unsortedValue: 45
+ >> (45 < 59) => True >> Continue Checking left index values
+At index 9 >> Insert unsortedValue value 45 
+As 45 < 59, Move arr[j-1] value 59 to the right at index 9  
+At index 9 - New value is 59 
+ >> Comparing Left of index: 8, Value 58 with  unsortedValue: 45
+ >> (45 < 58) => True >> Continue Checking left index values
+At index 8 >> Insert unsortedValue value 45 
+As 45 < 58, Move arr[j-1] value 58 to the right at index 8  
+At index 8 - New value is 58 
+ >> Comparing Left of index: 7, Value 56 with  unsortedValue: 45
+ >> (45 < 56) => True >> Continue Checking left index values
+At index 7 >> Insert unsortedValue value 45 
+As 45 < 56, Move arr[j-1] value 56 to the right at index 7  
+At index 7 - New value is 56 
+ >> Comparing Left of index: 6, Value 34 with  unsortedValue: 45
+ >> (45 < 34) => False and j : 6 >> unsortedValue is at sorted postion 
+At index 6 >> Insert unsortedValue value 45 
+New array formation : [2, 3, 4, 8, 23, 34, 45, 56, 58, 59, 78, 79, 123] 
+[2, 3, 4, 8, 23, 34, 45, 56, 58, 59, 78, 79, 123]
+
+#-------------------------------------------------------------------
+# Test Case 3: sorted list : arrlist = [1,2,3,4,5]
+#-------------------------------------------------------------------
+
+Input Array : [1, 2, 3, 4, 5] >> Length : 5 
+-----------------------------------------------------
+Current Unsorted array  : [1, 2, 3, 4, 5] 
+At Index: 1 >>  unsortedValue value 2 
+Current unsortedValue array value : 2, value to the left : 1
+New array formation : [1, 2, 3, 4, 5] 
+-----------------------------------------------------
+Current Unsorted array  : [1, 2, 3, 4, 5] 
+At Index: 2 >>  unsortedValue value 3 
+Current unsortedValue array value : 3, value to the left : 2
+New array formation : [1, 2, 3, 4, 5] 
+-----------------------------------------------------
+Current Unsorted array  : [1, 2, 3, 4, 5] 
+At Index: 3 >>  unsortedValue value 4                                    
+Current unsortedValue array value : 4, value to the left : 3
+New array formation : [1, 2, 3, 4, 5] 
+-----------------------------------------------------
+Current Unsorted array  : [1, 2, 3, 4, 5] 
+At Index: 4 >>  unsortedValue value 5 
+Current unsortedValue array value : 5, value to the left : 4
+New array formation : [1, 2, 3, 4, 5] 
+[1, 2, 3, 4, 5]
