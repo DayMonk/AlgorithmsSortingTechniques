@@ -33,7 +33,7 @@ def InsertionSort(arr):
             if unsortedValue < arr[j-1] and j > 0:
                 print(' >> ({} < {}) => True >> Continue Checking left index values'.format(unsortedValue,arr[j-1]))
             else:
-                print(' >> ({} < {}) => False and j : {} >> unsortedValue is at sorted postion '.format(unsortedValue,arr[j-1],j))
+                print(' >> ({} < {}) => False and j : {} >> unsortedValue is at sorted position '.format(unsortedValue,arr[j-1],j))
             # ---------------------------------------------------------------------------------------
             print ('At index {} >> Insert unsortedValue value {} '.format(j,unsortedValue))
         # Insert unsortedValue to it's rightful position.
