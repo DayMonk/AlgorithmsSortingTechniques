@@ -1,0 +1,226 @@
+ ############# Test Case 1  ############# 
+ Input array : [10, 4, 8, 6, 1, 3]
+ Left Half :[10, 4, 8] Right Half : [6, 1, 3]
+ 
+ >>> Recursive call mergesort for left array [10, 4, 8] 
+ Left Half :[10] Right Half : [4, 8]
+ 
+ >>> Recursive call mergesort for left array [10] 
+ Array has only one element [10] - no further action 
+ ----------------------------------------------------------
+ 
+ >>> Recursive call mergesort for Right array [4, 8] 
+ Left Half :[4] Right Half : [8]
+ 
+ >>> Recursive call mergesort for left array [4]                         
+ Array has only one element [4] - no further action 
+ ----------------------------------------------------------
+ 
+ >>> Recursive call mergesort for Right array [8] 
+ Array has only one element [8] - no further action 
+ ----------------------------------------------------------
+  
+ Merge -> Array : [4, 8] Left : [4] Right : [8] 
+ *-*-* End of merge function ** array is : [4, 8] 
+ ----------------------------------------------------------
+  
+ Merge -> Array : [10, 4, 8] Left : [10] Right : [4, 8] 
+ *-*-* End of merge function ** array is : [4, 8, 10] 
+ ----------------------------------------------------------
+ 
+ >>> Recursive call mergesort for Right array [6, 1, 3] 
+ Left Half :[6] Right Half : [1, 3]
+ 
+ >>> Recursive call mergesort for left array [6] 
+ Array has only one element [6] - no further action 
+ ----------------------------------------------------------
+ 
+ >>> Recursive call mergesort for Right array [1, 3] 
+ Left Half :[1] Right Half : [3]
+ 
+ >>> Recursive call mergesort for left array [1] 
+ Array has only one element [1] - no further action 
+ ----------------------------------------------------------
+ 
+ >>> Recursive call mergesort for Right array [3] 
+ Array has only one element [3] - no further action 
+ ----------------------------------------------------------
+  
+ Merge -> Array : [1, 3] Left : [1] Right : [3] 
+ *-*-* End of merge function ** array is : [1, 3] 
+ ----------------------------------------------------------
+  
+ Merge -> Array : [6, 1, 3] Left : [6] Right : [1, 3] 
+ *-*-* End of merge function ** array is : [1, 3, 6] 
+ ----------------------------------------------------------
+  
+ Merge -> Array : [10, 4, 8, 6, 1, 3] Left : [4, 8, 10] Right : [1, 3, 6] 
+ *-*-* End of merge function ** array is : [1, 3, 4, 6, 8, 10] 
+ 
+ Output array :[1, 3, 4, 6, 8, 10] 
+
+ ############# Test Case 2  #############
+
+ Input array : [3, 56, 2, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45]
+ Left Half :[3, 56, 2, 58, 79, 59] Right Half : [34, 23, 4, 78, 8, 123, 45]
+ 
+ >>> Recursive call mergesort for left array [3, 56, 2, 58, 79, 59] 
+ Left Half :[3, 56, 2] Right Half : [58, 79, 59]
+ 
+ >>> Recursive call mergesort for left array [3, 56, 2] 
+ Left Half :[3] Right Half : [56, 2]
+ 
+ >>> Recursive call mergesort for left array [3] 
+ Array has only one element [3] - no further action 
+ ----------------------------------------------------------                                                                       
+ >>> Recursive call mergesort for Right array [56, 2] 
+ Left Half :[56] Right Half : [2]
+ 
+ >>> Recursive call mergesort for left array [56] 
+ Array has only one element [56] - no further action 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [2] 
+ Array has only one element [2] - no further action 
+ ----------------------------------------------------------
+ Merge -> Array : [56, 2] Left : [56] Right : [2] 
+ *-*-* End of merge function ** array is : [2, 56] 
+ ----------------------------------------------------------
+  
+ Merge -> Array : [3, 56, 2] Left : [3] Right : [2, 56] 
+ *-*-* End of merge function ** array is : [2, 3, 56] 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [58, 79, 59] 
+ Left Half :[58] Right Half : [79, 59]
+ 
+ >>> Recursive call mergesort for left array [58] 
+ Array has only one element [58] - no further action 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [79, 59] 
+ Left Half :[79] Right Half : [59]
+ 
+ >>> Recursive call mergesort for left array [79] 
+ Array has only one element [79] - no further action 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [59] 
+ Array has only one element [59] - no further action 
+ ----------------------------------------------------------
+ Merge -> Array : [79, 59] Left : [79] Right : [59] 
+ *-*-* End of merge function ** array is : [59, 79] 
+ ----------------------------------------------------------
+ Merge -> Array : [58, 79, 59] Left : [58] Right : [59, 79] 
+ *-*-* End of merge function ** array is : [58, 59, 79] 
+ ---------------------------------------------------------- 
+ Merge -> Array : [3, 56, 2, 58, 79, 59] Left : [2, 3, 56] Right : [58, 59, 79] 
+ *-*-* End of merge function ** array is : [2, 3, 56, 58, 59, 79] 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [34, 23, 4, 78, 8, 123, 45] 
+ Left Half :[34, 23, 4] Right Half : [78, 8, 123, 45]
+ 
+ >>> Recursive call mergesort for left array [34, 23, 4] 
+ Left Half :[34] Right Half : [23, 4]
+ 
+ >>> Recursive call mergesort for left array [34] 
+ Array has only one element [34] - no further action 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [23, 4] 
+ Left Half :[23] Right Half : [4]
+ 
+ >>> Recursive call mergesort for left array [23] 
+ Array has only one element [23] - no further action 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [4] 
+ Array has only one element [4] - no further action 
+ ----------------------------------------------------------
+  
+ Merge -> Array : [23, 4] Left : [23] Right : [4] 
+ *-*-* End of merge function ** array is : [4, 23] 
+ ----------------------------------------------------------
+ Merge -> Array : [34, 23, 4] Left : [34] Right : [4, 23] 
+ *-*-* End of merge function ** array is : [4, 23, 34] 
+ ----------------------------------------------------------
+ 
+ >>> Recursive call mergesort for Right array [78, 8, 123, 45] 
+ Left Half :[78, 8] Right Half : [123, 45]
+ 
+ >>> Recursive call mergesort for left array [78, 8] 
+ Left Half :[78] Right Half : [8]
+ 
+ >>> Recursive call mergesort for left array [78] 
+ Array has only one element [78] - no further action 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [8] 
+ Array has only one element [8] - no further action 
+ ----------------------------------------------------------
+ Merge -> Array : [78, 8] Left : [78] Right : [8] 
+ *-*-* End of merge function ** array is : [8, 78] 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [123, 45] 
+ Left Half :[123] Right Half : [45]
+ 
+ >>> Recursive call mergesort for left array [123] 
+ Array has only one element [123] - no further action 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [45] 
+ Array has only one element [45] - no further action 
+ ----------------------------------------------------------
+  
+ Merge -> Array : [123, 45] Left : [123] Right : [45] 
+ *-*-* End of merge function ** array is : [45, 123] 
+ ----------------------------------------------------------
+ Merge -> Array : [78, 8, 123, 45] Left : [8, 78] Right : [45, 123] 
+ *-*-* End of merge function ** array is : [8, 45, 78, 123] 
+ ----------------------------------------------------------
+ Merge -> Array : [34, 23, 4, 78, 8, 123, 45] Left : [4, 23, 34] Right : [8, 45, 78, 123] 
+ *-*-* End of merge function ** array is : [4, 8, 23, 34, 45, 78, 123] 
+ ----------------------------------------------------------
+  
+ Merge -> Array : [3, 56, 2, 58, 79, 59, 34, 23, 4, 78, 8, 123, 45] Left : [2, 3, 56, 58, 59, 79] Right : [4, 8, 23, 34, 45, 78, 123] 
+ *-*-* End of merge function ** array is : [2, 3, 4, 8, 23, 34, 45, 56, 58, 59, 78, 79, 123] 
+ 
+ Output array :[2, 3, 4, 8, 23, 34, 45, 56, 58, 59, 78, 79, 123] 
+
+ ############# Test Case 3  #############
+
+ Input array : [1, 2, 3, 4, 5]
+ Left Half :[1, 2] Right Half : [3, 4, 5]
+ 
+ >>> Recursive call mergesort for left array [1, 2] 
+ Left Half :[1] Right Half : [2]
+ 
+ >>> Recursive call mergesort for left array [1] 
+ Array has only one element [1] - no further action 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [2] 
+ Array has only one element [2] - no further action 
+ ----------------------------------------------------------
+                                                                         
+ Merge -> Array : [1, 2] Left : [1] Right : [2] 
+ *-*-* End of merge function ** array is : [1, 2] 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [3, 4, 5] 
+ Left Half :[3] Right Half : [4, 5]
+ 
+ >>> Recursive call mergesort for left array [3] 
+ Array has only one element [3] - no further action 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [4, 5] 
+ Left Half :[4] Right Half : [5]
+ 
+ >>> Recursive call mergesort for left array [4] 
+ Array has only one element [4] - no further action 
+ ----------------------------------------------------------
+ >>> Recursive call mergesort for Right array [5] 
+ Array has only one element [5] - no further action 
+ ----------------------------------------------------------
+  
+ Merge -> Array : [4, 5] Left : [4] Right : [5] 
+ *-*-* End of merge function ** array is : [4, 5] 
+ ---------------------------------------------------------- 
+ Merge -> Array : [3, 4, 5] Left : [3] Right : [4, 5] 
+ *-*-* End of merge function ** array is : [3, 4, 5] 
+ ----------------------------------------------------------
+  
+ Merge -> Array : [1, 2, 3, 4, 5] Left : [1, 2] Right : [3, 4, 5] 
+ *-*-* End of merge function ** array is : [1, 2, 3, 4, 5] 
+ 
+ Output array :[1, 2, 3, 4, 5] 
