@@ -1,4 +1,4 @@
-# Algorithms SortingT echniques
+# Algorithms Sorting Techniques
 
 The folder will have the code files for sorting techniques listed below. The programming language used is Python.
 Logs are added accordingly.
